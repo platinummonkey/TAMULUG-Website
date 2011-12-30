@@ -1,0 +1,64 @@
+<VirtualHost *:80>
+        ServerAdmin officers@tamulgu.tamu.edu
+        ServerName www.tamulug.tamu.edu
+        ServerAlias tamulug.tamu.edu
+
+        DocumentRoot /tamulug/htdocs
+        <Directory />
+                Options FollowSymLinks
+                AllowOverride None
+        </Directory>
+        <Directory /tamulug/htdocs>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride None
+                Order allow,deny
+                allow from all
+        </Directory>
+
+        ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+        <Directory "/usr/lib/cgi-bin">
+                AllowOverride None
+                Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+                Order allow,deny
+                Allow from all
+        </Directory>
+
+        ErrorLog /var/log/apache2/error.log
+
+        # Possible values include: debug, info, notice, warn, error, crit,
+        # alert, emerg.
+        LogLevel warn
+
+        CustomLog /var/log/apache2/access.log combined
+
+    Alias /doc/ "/usr/share/doc/"
+    <Directory "/usr/share/doc/">
+        Options Indexes MultiViews FollowSymLinks
+        AllowOverride None
+        Order deny,allow
+        Deny from all
+        Allow from 127.0.0.0/255.0.0.0 ::1/128
+    </Directory>
+
+    <Location "/">
+        SetHandler python-program
+        PythonHandler django.core.handlers.modpython
+        SetEnv DJANGO_SETTINGS_MODULE tamulug.settings
+        PythonDebug On
+        PythonAutoReload On
+        PythonPath "['/tamulug/htdocs'] + sys.path"
+    </Location>
+  
+    Alias /media "/tamulug/htdocs/media"
+    # needed for static files to be served by apache instead of django
+    <Location "/media">
+        SetHandler None
+    </Location>
+    
+    Alias /adminmedia "/var/lib/python-support/python2.5/django/contrib/admin/media"
+    # needed for static files to be served by apache instead of django
+    <Location "/adminmedia">
+        SetHandler default-handler
+    </Location>
+
+</VirtualHost>
