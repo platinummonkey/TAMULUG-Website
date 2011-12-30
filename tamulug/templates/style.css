@@ -28,8 +28,9 @@ body
   margin-top: 40px;
   padding-top: 5px;
   padding-bottom: 5px;
-  border-top: solid #000 1px;
-  border-bottom: solid #000 1px;
+  /*border-top: solid #000 1px;
+  border-bottom: solid #000 1px;*/
+  background: #660000;
 }
 
 #links ul
@@ -41,13 +42,23 @@ body
 
 #links ul li
 {
-  padding-right: 15px;
+  padding-right: 5px;
   display: inline;
 }
 
 #links a
 {
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #FFF;
   text-decoration: none;
+}
+
+#links a:hover
+{
+  color: #000;
+  background: #CCC;
 }
 
 #content
