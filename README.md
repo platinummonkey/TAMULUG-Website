@@ -1,8 +1,7 @@
 TAMULUG Website
+===============
 
-Django website built for the Texas A&M Unix and Linux Users Group.
-
---------------------------------------------------------------------------------
+=== Django website built for the Texas A&M Unix and Linux Users Group.
 
 This is the source code distribution of TAMULUG Website.
 
@@ -16,9 +15,11 @@ or use one of the following resources:
 
 Homepage:      http://tamulug.tamu.edu
 
---------------------------------------------------------------------------------
+=== Legal Shenanigans
 
 Copyright 2011-2012 Cody Lee
+
+website design by Eric Wood!
 
 TAMULUG Website is free software: you can redistribute
 it and/or modify it under the terms of the GNU General Public License as
