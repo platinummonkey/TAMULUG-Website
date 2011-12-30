@@ -1,0 +1,13 @@
+custom datetime filters
+https://github.com/earonne/django-filter/commit/f7a409feacd85c11882e2d69b357c1e92af46c81
+
+adds post support
+https://github.com/alej0varas/django-filter/commit/325a5384f12ea8707d202118970a9793a66f610a
+
+
+django-filter with django-pagination
+https://github.com/alex/django-filter/issues/13
+
+add "any" filter to choices field
+https://github.com/alex/django-filter/issues/45
+
