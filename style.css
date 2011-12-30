@@ -1,0 +1,59 @@
+body
+{
+  font-family: sans-serif;
+}
+
+#title h1
+{
+  font-size: 2.7em;
+  margin: 0;
+}
+
+#title h2
+{
+  margin: 0;
+  padding-left: 30px;
+  font-size: 1.3em;
+}
+
+#links
+{
+  margin-top: 20px;
+}
+
+#links ul
+{
+  padding: 0;
+  display: inline;
+}
+
+#links ul li
+{
+  padding-right: 10px;
+  display: inline;
+}
+
+#links a
+{
+  text-decoration: none;
+}
+
+#content
+{
+  margin-top: 30px;
+  width: 800px;
+  margin: 0 auto;
+}
+
+#content h3
+{
+  padding-bottom: 5px;
+  border-bottom: solid #000 1px;
+}
+
+
+#content p
+{
+  padding-left: 20px;
+}
+
