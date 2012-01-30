@@ -100,7 +100,6 @@ body
 
 #content
 {
-  margin-top: 30px;
   width: 55%;
   max-width: 1000px;
   margin: 0 auto;
@@ -114,10 +113,32 @@ body
   border-bottom: solid #000 1px;
 }
 
+.content-box
+{
+  padding-bottom: 5px;
+}
 
 #content p
 {
   padding-left: 30px;
   padding-right: 30px;
+}
+
+#upcoming
+{
+  display: inline-block;
+  float: right;
+  background: #660000;
+  color: #EEE2BA;
+  text-align: right;
+  padding: 5px;
+  padding-left: 15px;
+  border: solid #660000 1px;
+  border-bottom-left-radius: 15px;
+}
+
+.next-meeting
+{
+  font-weight: bold;
 }
 
