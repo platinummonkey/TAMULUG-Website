@@ -4,6 +4,12 @@ body
   font-family: sans-serif;
 }
 
+#title
+{
+  background: #FFF;
+  padding-bottom: 40px;
+}
+
 #title img
 {
   float: left;
@@ -54,7 +60,7 @@ body
 
 #links
 {
-  margin-top: 40px;
+  /*margin-top: 40px;*/
   padding-top: 10px;
   padding-bottom: 10px;
   box-shadow: 0 3px 5px 6px #CCC;
@@ -95,9 +101,11 @@ body
 #content
 {
   margin-top: 30px;
-  width: 650px;
+  width: 55%;
+  max-width: 1000px;
   margin: 0 auto;
   margin-top: 60px;
+  background: #FFF;
 }
 
 #content h3
