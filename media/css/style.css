@@ -74,7 +74,7 @@ body
 #links ul
 {
   padding: 0;
-  margin-left: 50px;
+  margin-left: 25px;
   display: inline;
 }
 
@@ -100,7 +100,7 @@ body
 
 #content
 {
-  width: 55%;
+  width: 75%;
   max-width: 1000px;
   margin: 0 auto;
   margin-top: 60px;
