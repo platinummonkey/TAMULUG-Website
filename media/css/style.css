@@ -113,6 +113,8 @@ div#content > *:nth-child(2n+2) {
 
 #content h3
 {
+  margin: 15px;
+  padding-top: 10px;
   padding-bottom: 5px;
   border-bottom: solid #000 1px;
 }
