@@ -108,6 +108,7 @@ body
 }
 
 div#content > *:nth-child(2n+2) {
+  border-radius: 20px;
   background: #EEE;
 }
 
