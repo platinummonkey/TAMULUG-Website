@@ -4,6 +4,16 @@ body
   font-family: sans-serif;
 }
 
+a
+{
+  color: #0066FF;
+}
+
+a:hover
+{
+  text-decoration: none;
+}
+
 #title
 {
   background: #FFF;
@@ -145,3 +155,18 @@ div#content > *:nth-child(2n+2) {
   font-weight: bold;
 }
 
+#footer
+{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background: #660000;
+  color: #FFF;
+  margin-top: 30px;
+  font-size: 10pt;
+  text-align: center;
+}
+
+#footer a
+{
+  color: #FFF;
+}
