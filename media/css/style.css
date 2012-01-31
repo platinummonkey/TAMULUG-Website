@@ -107,6 +107,10 @@ body
   background: #FFF;
 }
 
+div#content > *:nth-child(2n+2) {
+  background: #EEE;
+}
+
 #content h3
 {
   padding-bottom: 5px;
