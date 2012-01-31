@@ -60,14 +60,9 @@ body
 
 #links
 {
-  /*margin-top: 40px;*/
   padding-top: 10px;
   padding-bottom: 10px;
   box-shadow: 0 3px 5px 6px #CCC;
-  -moz-box-shadow: 0 3px 5px 6px #CCC;
-  -webkit-box-shadow: 0 3px 5px 6px #CCC;
-  /*border-top: solid #000 1px;
-  border-bottom: solid #000 1px;*/
   background: #660000;
 }
 
@@ -141,6 +136,7 @@ div#content > *:nth-child(2n+2) {
   padding-left: 15px;
   border: solid #660000 1px;
   border-bottom-left-radius: 15px;
+  box-shadow: -6px 8px 5px #CCC;
 }
 
 .next-meeting
