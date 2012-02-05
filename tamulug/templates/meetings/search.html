@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% load pagination_tags %}
+
+
+{% block title %}
+All Meetings
+{% endblock %}
+
+{% block extrahead %}<script type="text/javascript" src="/media/js/toggle.js"></script>{%  endblock %}
+
+{% block upcoming %}
+{% if upcoming %}
+      <span class="next-meeting">Next Meeting: </span>
+      {{ upcoming.title }}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<!--  START CONTENT -->
+<!--  LEFT SIDE -->
+<h2>All Meeetings</h2>
+<div class="filter-box" style=padding-top:0>
+<h3><span style=float:right;display:block;margin-top:10px;><a id="filterImageLink" href="javascript:toggleFilter('filter-content-div', 'filterImageLink');"><img src="/media/site_images/down_arrow.gif"></a></span>&nbsp;&nbsp;Filter Meetings</h3>
+<div id="filter-content-div" style="display: none;">
+<form action="/meetings/all/" method="get">{% csrf_token %}
+{{ filter.form.non_field_errors }}
+
+<div id="filterContentDiv" class=filter_table>
+<table cellpadding=0 cellspacing=0>
+<tr>
+<td>{{ filter.form.title.errors }}
+<label for="id_title">Meeting Title</label>
+</td>
+<td>
+{{ filter.form.title }}
+</td>
+</tr>
+<tr>
+<td>
+<label for="id_date">Date & Time</label>
+</td>
+<td>
+{{ filter.form.date }}
+
+</td>
+</tr>
+<tr>
+<td>
+<label for="id_details">Meeting Details</label>
+</td>
+<td>
+{{ filter.form.details }}
+</td>
+</tr>
+<tr>
+<td>
+<label for="id_is_dinner">Search Dinners?</label>
+</td>
+<td>
+{{ filter.form.is_dinner }}
+
+</td>
+</tr>
+<tr>
+<td>
+<label for="id_topics">Search Topics</label>
+</td>
+<td>
+{{ filter.form.topic }}
+</td>
+</tr>
+<tr>
+<td>
+<label for="id_presenters">Search Presenters</label>
+</td>
+<td>
+{{ filter.form.presenter }}
+</td>
+</tr>
+<tr>
+<td> {{ filter.form.o.errors }}
+<label for "id_o">Order By</label>
+</td>
+<td>
+{{ filter.form.o }}
+</td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<input type="submit" value="Filter Results">
+</td>
+<td></td><td></td>
+</tr>
+</table>
+</form>
+</div>
+</div>
+</div>
+
+<div class="textholder_wide" style=padding-top:0>
+<h3><span style=float:right><a href="{{ csvDownloadLink }}">Download CSV</a></span>Filter Results ({{ numMeetings }})</h3>
+{% autopaginate filter.qs 40 as filter_list %}
+<div class="event_list">
+<table cellpadding=0 cellspacing=0 width=100%>
+<tr class=el_title>
+<td class=el_start><strong>Title</strong></td>
+<td><strong>Date</strong></td>
+<td><strong>Dinner?</strong></td>
+<td><strong>Details</strong></td>
+<td><strong># Topics</strong></td>
+<td><strong>Presenters</strong></td>
+</tr>
+{% for m in filter_list %}
+<tr>
+<td class=el_start>{{ m.title|title }}</td>
+<td>{{ m.date|date:"n/j/y h:i A" }}</td>
+<td>{{ m.is_dinner }}</td>
+<td>{{ m.details|truncatewords:10 }}</td>
+<td>{{ m.topics.count }}</td>
+<td class=el_end>{% for t in m.topics.all %}{{ t.presenter }},{% endfor %}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+<center>{% paginate %}</center>
+</div>
+
+</div>
+
+<!--  END CONTENT -->
+{% endblock %}
