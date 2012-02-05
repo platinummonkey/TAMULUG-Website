@@ -10,9 +10,7 @@ import csv
 
 def index(request):
   meetings = getCurrentSemesterMeetings()
-  print repr(meetings)
   upcoming = getNextMeeting()
-  print repr(upcoming)
   return render_to_response('meetings/index.html',
          {'meetings': meetings, 'upcoming': upcoming},
          context_instance=RequestContext(request))
@@ -24,6 +22,7 @@ def getDownloadLink(request, type='csv'):
 
 
 def filterAll(request, download=None):
+  upcoming = getNextMeeting()
   f = MeetingFilterSet(request.GET or None)
   numMeetings = f.qs.count()
   csvDownloadLink = getDownloadLink(request,'csv')
@@ -48,4 +47,4 @@ def filterAll(request, download=None):
         topics, presenters = ('', '')
       writer.writerow([str(m.date),str(m.title),str(m.is_dinner),str(m.details).replace(',',''),topics,presenters])
     return response
-  return render_to_response('meetings/search.html', {'filter': f, 'numMeetings': numMeetings, 'csvDownloadLink': csvDownloadLink}, context_instance=RequestContext(request))
+  return render_to_response('meetings/search.html', {'filter': f, 'numMeetings': numMeetings, 'upcoming': upcoming, 'csvDownloadLink': csvDownloadLink}, context_instance=RequestContext(request))

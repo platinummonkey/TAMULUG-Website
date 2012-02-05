@@ -54,6 +54,10 @@
     <Location "/media">
         SetHandler None
     </Location>
+
+    <Location "/wiki">
+        SetHandler None
+    </Location>
     
     Alias /adminmedia "/var/lib/python-support/python2.5/django/contrib/admin/media"
     # needed for static files to be served by apache instead of django

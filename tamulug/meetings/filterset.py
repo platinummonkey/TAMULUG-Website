@@ -3,16 +3,16 @@ from tamulug.meetings.models import *
 import datetime, time
 
 class MeetingFilterSet(django_filters.FilterSet):
-  title = django_filters.filters.CharFilter(lookup_type='icontains')
-  is_dinner = django_filters.filters.BooleanFilter()
-  details = django_filters.filters.CharFilter(lookup_type='icontains')
-  date = django_filters.filters.DateFilter()
-  topic = django_filters.filters.CharFilter(lookup_type='icontains', name='topics__topic')
-  presenter = django_filters.filters.CharFilter(lookup_type='icontains', name='topics__presenter')
+  title = django_filters.filters.CharFilter(lookup_type='icontains',label="Title")
+  is_dinner = django_filters.filters.BooleanFilter(label="Search Dinners?")
+  details = django_filters.filters.CharFilter(lookup_type='icontains',label="Details")
+  date = django_filters.filters.DateFilter(label="Date")
+  topic = django_filters.filters.CharFilter(lookup_type='icontains', name='topics__topic',label="Topics")
+  presenter = django_filters.filters.CharFilter(lookup_type='icontains', name='topics__presenter',label="Presenters")
 
   class Meta:
     model = Meeting
-    fields = ['title','date','details','is_dinner']
+    fields = ['date','title','details','is_dinner']
     order_by = True # allow any field to be sorted by
 
   def __init__(self, *args, **kwargs):
