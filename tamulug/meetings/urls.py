@@ -15,5 +15,6 @@ urlpatterns = patterns('tamulug.meetings.views',
     # next meeting only
     #(r'^next/$', 'nextMeeting'),
     # all meetings
-    #(r'^all/$', 'allMeetings'), # includes search capability
+    (r'^all/$', 'filterAll'), # includes search capability
+    (r'^all/generate/csv/$', 'filterAll', {'download': 'csv'}),
 )

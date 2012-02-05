@@ -48,4 +48,4 @@ def filterAll(request, download=None):
         topics, presenters = ('', '')
       writer.writerow([str(m.date),str(m.title),str(m.is_dinner),str(m.details).replace(',',''),topics,presenters])
     return response
-  return render_to_response('meetings/search.html', {'filter': f, 'numMeetings': numMeetings, 'csvDownloadLink', csvDownloadLink}, context_instance=RequestContext(request))
+  return render_to_response('meetings/search.html', {'filter': f, 'numMeetings': numMeetings, 'csvDownloadLink': csvDownloadLink}, context_instance=RequestContext(request))
