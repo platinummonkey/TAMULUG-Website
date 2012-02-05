@@ -19,7 +19,7 @@ urlpatterns = patterns('',
     # current officers
     #(r'^officers/', include('tamulug.officers.urls')),
     # meetings
-    #(r'^meetings/', include('tamulug.meetings.urls')),
+    (r'^meetings/', include('tamulug.meetings.urls')),
     # contact us
     #(r'^contact/', 'tamulug.views.contactus'),
     # tamulinux

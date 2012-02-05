@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block upcoming %}
+{% if upcoming %}
+      <span class="next-meeting">Next Meeting: </span>
+      {{ upcoming.title }}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{% if meetings %}
+{% for m in meetings %}
+      <div class="content-box">
+        <h3>{{ m.date }} - {{ m.title|title }}</h3>
+        {% if m.is_dinner %}
+        <!-- generate google map -->
+        {% else %}
+        <p>{{ m.details }}</p>
+	<p>Meeting Topics:<ul>{% for topic in m.getTopics %}
+		<li><strong>{{ topic.topic|title }}</strong> by {{ topic.presenter|title }}</li>
+	{% endfor %}
+	</ul></p>
+      {% endif %}
+      </div>
+{% endfor %}
+{% else %}
+there are no meetings
+{% endif %}
+{% endblock %}
