@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}
+Thank you
+{% endblock %}
+
+{% block upcoming %}
+{% if upcoming %}
+      <span class="next-meeting">Next Meeting: </span>
+      {{ upcoming.title }}
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<!--  RIGHT SIDE -->
+<div class="right-side">
+<h1 style=padding-left:20px;>CONTACT INFO</h1>
+<div class="right-menu">
+<p><strong>Advanced Visualization Laboratory</strong><br>
+MS Building 1.03.06N<br>
+The University of Texas at San Antonio<br>
+One UTSA Circle<br>
+San Antonio, Texas 78249<br>
+(210) 458.6570<br><br>
+<strong>How to get to the VizLab</strong><br>
+<a href=../media/site_images/VizLabMap.jpg target=_blank><img src=../media/site_images/vizlabmapthumb.png></a></p>
+
+
+
+</div>
+
+</div>
+
+
+<!--  LEFT SIDE -->
+<h1>CONTACT THE <span>VIZLAB</span></h1>
+<div class="textholder">
+<h2>Thank you for contacting us</h2>
+<p>Please allow up to 72 hours for a response!<p>
+
+<h2>Contact Submission</h2>
+<ul><li><strong>Name:</strong> {{ submission.name }}</li>
+<li><strong>Phone:</strong> {{ submission.phone }}</li>
+<li><strong>Email:</strong> {{ submission.email }}</li>
+<li><strong>Subject:</strong> {{ submission.subject }}</li>
+<li><strong>Message:</strong> {{ submission.message }}</li>
+</ul>
+
+</div>
+
+
+
+<div class="clear"></div>
+
+<!--  END CONTENT -->
+{% endblock %}

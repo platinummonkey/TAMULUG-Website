@@ -1,0 +1,8 @@
+Sender Information:
+Name: {{ submission.name|title }}
+Email: {{ submission.email }}
+
+{{ submission.subject|title }}
+{{ submission.message }}
+
+--Automated Message

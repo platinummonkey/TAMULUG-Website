@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contact Us
+{% endblock %}
+
+{% block upcoming %}
+{% if upcoming %}
+      <span class="next-meeting">Next Meeting: </span>
+      {{ upcoming.title }}
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="content-box">
+<h3>Contact Us</h3>
+<form name="contactform" method="post" action="/contact/">
+<div id="contactform" class=formsyeah>
+<table width="100%">
+<tr>
+ <td valign="top">
+  <label for="id_name">Name *</label>
+ </td>
+ <td valign="top">
+ {{ form.name }}
+ <span class=tip>{{ form.name.help_text }} {{ form.name.errors }}</span>
+ </td>
+</tr>
+
+<tr>
+ <td valign="top">
+  <label for="id_email">Email Address *</label>
+ </td>
+ <td valign="top">
+ {{ form.email }}
+ <span class=tip>{{ form.email.help_text }} {{ form.email.errors }}</span>
+ </td>
+</tr>
+
+<tr>
+ <td valign="top">
+  <label for="id_subject">Subject *</label>
+ </td>
+ <td valign="top">
+ {{ form.subject }}
+ <span class=tip>{{ form.subject.help_text }} {{ form.subject.errors }}</span>
+ </td>
+</tr>
+
+<tr>
+ <td valign="top">
+  <label for="id_message">Comments *</label>
+ </td>
+ <td valign="top">
+ {{ form.message }}
+ <span class=tip>{{ form.message.help_text }} {{ form.message.errors }}</span>
+ </td>
+</tr>
+
+<tr>
+ <td valign="top">
+  <label for="id_cc_myself">Send me a copy</label>
+ </td>
+ <td valign="top">
+ {{ form.cc_myself }}
+ <span class=tip>{{ form.cc_myself.help_text }} {{ form.cc_myself.errors }}</span>
+ </td>
+</tr>
+
+
+<tr>
+ <td valign="top">
+  <label for="id_captcha">Confirm you are human *</label>
+ </td>
+ <td valign="top">
+ {{ form.captcha }}
+ <span class=tip>This is CASE SENSITIVE! {{ form.captcha.errors }}</span>
+ </td>
+</tr>
+
+<tr>
+ <td colspan="2" style="text-align:center">
+  <input type="submit" value="Submit">
+ </td>
+</tr>
+</table>
+</div>
+</form>
+</p>
+
+
+</div>
+
+
+<!--  END CONTENT -->
+{% endblock %}

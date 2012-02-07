@@ -21,11 +21,13 @@ urlpatterns = patterns('',
     # meetings
     (r'^meetings/', include('tamulug.meetings.urls')),
     # contact us
-    #(r'^contact/', 'tamulug.views.contactus'),
+    (r'^contact/', 'tamulug.contact.views.contact'),
     # tamulinux
     #(r'^tamulinux/', 'tamulug.views.tamulinux'),
     # irc
     #(r'^irc/', 'tamulug.views.webIRCclient'),
     # forum
     #(r'^forum/', include('tamulug.forum.urls')),
+    # catpcha
+    (r'^captcha/', include('captcha.urls')),
 )

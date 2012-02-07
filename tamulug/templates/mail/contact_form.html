@@ -1,0 +1,12 @@
+{% extends "mail/base_mail.html" %}
+
+{% block title %}Contact Form Submission: {{ submission.subject|title|truncatewords:15 }}
+{% endblock %}
+
+{% block content %}
+<p>Sender Information:<br>Name: {{ submission.name|title }}<br>Email: {{ submission.email }}</p><br><br>
+<p><strong>{{ submission.subject|title }}</strong></p>
+<p>{{ submission.message }}</p>
+<br>
+<p>--Automated Message</p>
+{% endblock %}
