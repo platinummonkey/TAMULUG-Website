@@ -136,6 +136,24 @@ div#content > *:nth-child(2n+2) {
   padding-right: 30px;
 }
 
+.content-box ul
+{
+  margin-left: 30px;
+}
+
+.meeting-date
+{
+  display: inline-block;
+  font-weight: normal;
+  font-size: 9pt;
+  padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #FFF;
+  background: #660000;
+  border-radius: 5px;
+}
+
 #upcoming
 {
   display: inline-block;

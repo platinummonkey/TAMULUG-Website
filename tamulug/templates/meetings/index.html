@@ -14,7 +14,7 @@
 {% paginate %}
 {% for m in meetings %}
       <div class="content-box">
-        <h3>{{ m.date }} - {{ m.title|title }}</h3>
+        <h3><span class="meeting-date">{{ m.date }}</span> {{ m.title|title }}</h3>
         {% if m.is_dinner %}
         <!-- generate google map -->
         {% else %}
@@ -28,6 +28,6 @@
 {% endfor %}
 {% paginate %}
 {% else %}
-there are no meetings
+Sorry, no meetings. Either something broke or TAMULUG has died :'(
 {% endif %}
 {% endblock %}
