@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block upcoming %}
+{% if upcoming %}
+      <span class="next-meeting">Next Meeting: </span>
+      {{ upcoming.title }}
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+      <div class="content-box">
+        <h3>IRC Etiquette</h3>
+	<ul><h4>Contents:</h4>
+<li><a href="#channelusage">Channel usage guidelines</a></li>
+<li><a href="#suspension">Suspension and expulsion</a></li>
+<li><a href="#awaymessages">Away Messages</a></li>
+<li><a href="#nickchanges">Nick Changes</a></li>
+<li><a href="#leetspeak">L33t Speak</a></li>
+<li><a href="#flaming">No Flaming</a></li>
+<li><a href="#trolling">No Trolling</a></li>
+<li><a href="#punctuation">Punctuation</a></li>
+<li><a href="#askquestion">Asking Questions Properly</a></li>
+<li><a href="#commonsense">Common Sense</a></li>
+<li><a href="#priviledge">#tamulug is not a priviledge/right</a></li>
+</ul>
+
+<br /><h4 id="channelusage">Channel usage guidelines</h4>
+
+<p><ul><li>Note that discussion of these guidelines is by and large off-topic.</li>
+
+  <li>Off-topic talk is acceptable at the discretion of the other channel participants. In particular, if it is distracting from on-topic talk, the people talking off-topic should move to a different channel, briefly noting its name so that others interested in the conversation may join them.</li>
+
+  <li>Offer respect and courtesy to the other participants in the channel at all times. If someone is being abusive, do not abuse them back, but politely indicate their behaviour is inappropriate, or ask a channel moderator to do so. If you find yourself acting inappropriately, cease doing so, and offer your apologies to the other channel participants.</li>
+
+  <li>Participants in the channel are expected to be peers. The channel is for discussion and advice. Asking for help or advice is on-topic, but you should be in a position to give help and useful advice in return; if you don't know enough or don't have enough experience, you should consider yourself a welcome guest in the channel and try to improve upon your knowledge, without making yourself a burden. You should not make demands of other participants, nor become aggressive or agitated if your suggestions are not accepted. That your advice is not acted upon does not mean it is not valued or appreciated. Realise it takes two (or more) to have a conversation; if other people aren't interested in talking about something, don't try pressuring them into it.</li>
+
+  <li>Participants generally should be respectful of each other and third parties outside the channel as well as inside it; pointing out how careless or ignorant someone is on your blog makes for a combative environment on channel, even though you may be scrupulously polite there.</li>
+
+  <li>Participants should note that technical criticism is often taken personally; you cannot expect someone to put their heart and soul into *nix, and expect them not to take offense when you insult their contribution. Likewise, participants should note that technical criticism is an important part of improving, and try to avoid taking it personally when their peers point out mistakes, problems, or better ways of doing things. You should make every effort to avoid arguments becoming overly personal. </li>
+
+  <li>Please realise that everyone on the channel will have a different interpretation on where the line between respectful and disrespectful is. You should take this into account in two ways: by trying to find out what your colleagues consider respectful and incorporating that into your behaviour in their presence, and not assuming that behaviour your find disrespectful and offensive is intended that way, as it may be quite the reverse. </li>
+
+  <li>Note that it's often very difficult to follow conversations on IRC, even if only because you might be asleep when they take place.</li>
+
+  <li>If you don't think these guidelines are reasonable, or don't think that anyone else has a right to judge either what you say or how you choose to say it, this probably is not the channel for you. </li>
+
+  <li>You may wish to refer to other "good behaviour" guidelines such as the Ubuntu Code of Conduct, Usenet etiquette guidelines, or books like How to Win Friends and Influence People for more information on effective ways to act.</li></ul></p>
+
+<br /><h4 id="suspension">Suspension and expulsion</h4>
+<p><ul>
+  <li>Participants who don't follow the usage guidelines will be warned by fellow participants or a channel moderator, and if the behaviour continues the moderators will remove their voice within the channel, ban the participant or put a similar preventative measure in place. In such a case, the moderator responsible will comment briefly to the channel what is going on and why. Such sanctions will be removed at the discretion of the moderators, when it seems likely that doing so won't result in further problems.</li>
+
+  <li>Note that attacks on moderators make the task of moderation very difficult, since responding to the attack brings the moderators' objectivity into question, which makes everyone's job more difficult. If you have a problem with the behaviour of a moderator, ask one of the others for assistance privately.</li></ul></p>
+
+<br /><h4 id="awaymessages">Away Messages</h4>
+<p><ul>
+  <li>There is absolutely nothing worse than any type of away message that generates noise. Especially on a busy channel, where such a thing can result in instant banning. Generally, it's in your best interests to turn off all broadcasting "away's" that your IRC client may have. When using a new IRC client, before connecting to a server or going away, you should check to make sure that your away message settings are all set to silent. Especially since a few popular IRC clients come with away message broadcasting enabled by default. Now that I've told you all of this, I'm sure that I shouldn't even have to mention that switching your name based on your various periods of inactivity can also be rather annoying, especially when overused.</li></ul></p>
+
+<br /><h4 id="nickchanges">Nick Changes</h4>
+
+<p><ul>  <li>Constantly changing your nick to let us know what you are doing is just as annoying as using an away message. It is not necessary that we know that you are going to the bathroom by changing your nick to John-Doe-Pissin or that you have wondered outside to check the mail by changing your nick to John-Doe-Postalbox. No matter what you do, nick changes you perform show directly into the channel and get very annoying to see constantly. If you are going to be away from the computer, simply use an away message that does not announce when you do /away Gone Pissin to the channels you are in. Pick a nick and stick with it for as long as you shall live. Or if you want to constantly change nicks, do it BEFORE you get into the channel or AFTER you leave the channel. Buffer space is quite precious and doesn't need to be filled with: John-Doe is away Cuz I need to piss or John-Doe is now known as John-Doe-Pissin.</li></ul></p>
+
+<br /><h4 id="leetspeak">L33t speak</h4>
+<p><ul>
+  <li>On IRC, it's very important for users to be able to understand what you're saying, so, obviously, sp43k1ng with symbols and numbers in the place of letters is not a very good thing to do if you really want to be taken seriously. Using painfully bad grammar and ridiculous amounts of nothing but smiles generally go along with l33t speak and both practices are frowned on.</li></ul></p>
+
+<br /><h4 id="flaming">No Flaming</h4>
+<p><ul>
+  <li>"Flaming" is what people do when they express a strongly held opinion without holding back any emotion. It's the kind of message that makes people respond, "Oh come on, tell us how you really feel." Tact is not its objective. Topics that lead to flame wars are discussions about other Distributions or Window Managers, this is not the channel for that type of discussion, it leads to arguments and unfairly monopolizes bandwidth from users that need legitimate help.</li></ul></p>
+
+<br /><h4 id="trolling">No Trolling</h4>
+<p><ul>  <li>"Trolling" is when somebody is purposely disrupting a channel in order to invoke a response out of a group or someone. Trolling is highly frowned upon, and in #tamulug you will be warned first, kicked second, then banned temporarily the third time. After banned, you must ask an channel operator in private message to be unbanned and provide a reason why we should let you rejoin. Further trolling will result in permanent banning and possible expulsion from TAMULUG.</li></ul></p>
+
+<br /><h4 id="punctuation">Punctuation</h4>
+<p><ul>
+  <li>It is also very important to understand that using excessive punctuation isn't necessary as well. If you ask a question and use 10 ?'s after it doesn't automatically mean everyone is going to jump up and start answering your question just because you feel it to be so very urgent. The best way to handle things is to type your sentences/questions just as if you would in real life on paper or something similar. Excessive punctuation only draws attention to you as being in a hurry and sometimes it's even considered rude. One exclamation point(!) or one question mark(?) is plenty of punctuation to get your point across. </li></ul></p>
+
+<br /><h4 id="askquestion">Asking Questions Properly</h4>
+<p><ul><li>If you go to a channel and need help with something remember to be polite to those that you're asking for help; of course, that is if you want a response. Remember that the people there are not there for the single purpose of helping you, they also have other things to do and thus if you're being rude and nasty, chances are that they will do those other things instead of helping you with your problem. And you could be kicked and/or banned from the channel if rudeness persists. And it's always good to say thank you after being helped by someone (regardless of whether they were successful in fixing your problem). It doesn't take a lot of effort and it really is a good thing to do, if only because it makes people more willing to help you in the future if they remember you as being nice. Finally, when posing a question, your best bet is to paste all pertinent information on rafb orfpaste. Then, give a brief synopsis of your problem in the appropriate channel with a link to your pasted errors and other information. Pay attention to the information your receive, if someone is abusive or unhelpful, simply ignore them and do not respond at all. Fighting or arguing with others (even if you believe you're right) will only make you look bad and unnecessarily complicate your issue. This is the internet, let it go.</li></ul></p>
+
+<br /><h4 id="commonsense">Common Sense</h4>
+<p><ul>
+  <li>Alltogether, there is no better way to figure out what is tolerated in a channel and what is *not* tolerated in a channel by asking someone, reading the topic, or reading any rules webpage for that channel.</li></ul></p>
+
+
+<br /><h4 id="priviledge">Talking in #tamulug is not a priviledge or right, your cooperation directly effects your membership.</h4>
+            </div>
+         </div>
+      </div>
+{% endblock %}

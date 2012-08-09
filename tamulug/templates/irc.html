@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block upcoming %}
+{% if upcoming %}
+      <span class="next-meeting">Next Meeting: </span>
+      {{ upcoming.title }}
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+      <div class="content-box">
+        <h3>Chat With Us!</h3><center>
+	<p>TAMULUG Web Chat: Not sure how to connect to IRC yet? Use this!<br />
+	<b><u>Please note that people may not be waiting on your every word!!! Give us a few minutes to respond!!!</u></b><br />
+	<a href="/irc/etiquette/">IRC Etiquette</a></p>
+        <iframe width="100%" height="600" src="http://widget.mibbit.com/?settings=34e7030e5de290229c38c510a98cfc71&server=irc.tamu.edu&channel=%23tamulug&nick={{ guest_name }}"></iframe>
+      </div>
+{% endblock %}

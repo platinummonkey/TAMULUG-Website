@@ -12,12 +12,12 @@ urlpatterns = patterns('',
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    #(r'^admin/', include(admin.site.urls)),
+    (r'^admin/', include(admin.site.urls)),
 
     # home page
     (r'^$', 'tamulug.views.index'),
     # current officers
-    #(r'^officers/', include('tamulug.officers.urls')),
+    (r'^officers/', include('tamulug.accounts.urls-officers')),
     # meetings
     (r'^meetings/', include('tamulug.meetings.urls')),
     # contact us
@@ -25,7 +25,8 @@ urlpatterns = patterns('',
     # tamulinux
     #(r'^tamulinux/', 'tamulug.views.tamulinux'),
     # irc
-    #(r'^irc/', 'tamulug.views.webIRCclient'),
+    (r'^irc/etiquette/', 'tamulug.views.irc_etiquette'),
+    (r'^irc/', 'tamulug.views.irc'),
     # forum
     #(r'^forum/', include('tamulug.forum.urls')),
     # catpcha

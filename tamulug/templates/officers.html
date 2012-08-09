@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block upcoming %}
+{% if upcoming %}
+      <span class="next-meeting">Next Meeting: </span>
+      {{ upcoming.title }}
+{% else %}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+      <div class="content-box">
+        <h3>Current Officers</h3>
+	<table width="100%" colspacing="0px" colpadding="4px" cols=2>
+	<tr><th>Position</th><th>Name</th></tr>
+	{% for o in officers %}
+        <tr align="center"><td>{{ o.1.officer_position }}</td><td>{{ o.0.first_name }} {{ o.0.last_name }}</td></tr>
+        {% endfor %}
+	</table>
+      </div>
+{% endblock %}
