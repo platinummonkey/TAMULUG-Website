@@ -11,7 +11,7 @@ All Meetings
 {% block upcoming %}
 {% if upcoming %}
       <span class="next-meeting">Next Meeting: </span>
-      {{ upcoming.title }}
+      <a href="/meetings">{{ upcoming.title }}</a>
 {% endif %}
 {% endblock %}
 

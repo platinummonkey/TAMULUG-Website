@@ -10,3 +10,13 @@
   python manage.py syncdb
 7. Create a root web user
 8. Enable the site - requires mod_python installed
+
+PYTHON DEPENDENCIES:
+  vobject
+  email.mime.text
+  recaptcha
+  csv
+  datetime
+  time
+  django-pagination
+  django-filter
