@@ -180,6 +180,10 @@ div#content > *:nth-child(2n+2) {
 
 #footer
 {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
   padding-top: 2px;
   padding-bottom: 2px;
   background: #660000;
