@@ -168,6 +168,12 @@ div#content > *:nth-child(2n+2) {
   box-shadow: -6px 8px 5px #CCC;
 }
 
+#upcoming a
+{
+  color: #EEE2BA;
+  text-decoration: none;
+}
+
 .next-meeting
 {
   font-weight: bold;
