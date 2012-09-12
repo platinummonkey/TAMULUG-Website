@@ -168,6 +168,8 @@ div#content > *:nth-child(2n+2) {
   text-align: right;
   padding: 5px;
   padding-left: 15px;
+  padding-right: 10px;
+  padding-bottom: 10px;
   border: solid #660000 1px;
   border-bottom-left-radius: 15px;
   box-shadow: -6px 8px 5px #CCC;
