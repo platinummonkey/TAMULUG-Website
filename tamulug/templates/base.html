@@ -5,62 +5,60 @@
     {% block extrahead %}{% endblock %}
   </head>
   <body>
-    <div id="wrapper">
-      <div id="title">
-        <a href="/" border="0"><img src="/media/site_images/tux.png" alt="TAMULUG" width="157" height="200" /></a>
-        <h1>TAMULUG</h1>
-        <h2>Texas A&amp;M Unix &amp; Linux Users Group</h2>
-        <form action="http://www.google.com/search" accept-charset="UTF-8" method="get">
-          <input name="q" size="30" placeholder="Search" title="Search fo stuff" id="search-bar" type="text">
-          <input id="search-submit" name="op" id="submit" value="Search" type="submit">
-        </form>
+    <div id="title">
+      <a href="/" border="0"><img src="/media/site_images/tux.png" alt="TAMULUG" width="157" height="200" /></a>
+      <h1>TAMULUG</h1>
+      <h2>Texas A&amp;M Unix &amp; Linux Users Group</h2>
+      <form action="http://www.google.com/search" accept-charset="UTF-8" method="get">
+        <input name="q" size="30" placeholder="Search" title="Search fo stuff" id="search-bar" type="text">
+        <input id="search-submit" name="op" id="submit" value="Search" type="submit">
+      </form>
+    </div>
+    <div id="links">
+      <ul>
+        <li><a href="/meetings/">Upcoming Meetings</a></li>
+        <li><a href="/wiki/">Wiki</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        <li><a href="/officers/">Current Officers</a></li>
+        <li><a href="/irc/">IRC</a></li>
+      </ul>
+    </div>
+    <div id="upcoming">{% block upcoming %}
+      <span class="next-meeting">Next Meeting: </span>
+      Topic Title by Some Person
+    {% endblock %}
+    </div>
+    <div id="content">{% block content %}
+      <div class="content-box">
+        <h3>Howdy!</h3>
+        <p>This is an <a href="#">anchor</a></p>
+        <p>Welcome to TAMULUG - the home of The Texas A&amp;M Unix &amp; Linux Users Group.</p>
+        <p>We currently meet every Wednesday evening at 7:00PM on Texas A&amp;M Campus in Zachry, room 105D. Anyone with an interest in Unix, Linux and open source software is welcome to attend.</p>
+        <p>The TAMULUG is a not-for-profit organization dedicated to providing education about the installation, usage, and maintenance of *NIX operating systems and development of free and open source software.</p>
       </div>
-      <div id="links">
-        <ul>
-          <li><a href="/meetings/">Upcoming Meetings</a></li>
-          <li><a href="/wiki/">Wiki</a></li>
-          <li><a href="/contact/">Contact Us</a></li>
-          <li><a href="/officers/">Current Officers</a></li>
-          <li><a href="/irc/">IRC</a></li>
-        </ul>
+      <div class="content-box">
+        <h3>Howdy!</h3>
+        <p>Welcome to TAMULUG - the home of The Texas A&amp;M Unix &amp; Linux Users Group.</p>
+        <p>We currently meet every Wednesday evening at 7:00PM on Texas A&amp;M Campus in Zachry, room 105D. Anyone with an interest in Unix, Linux and open source software is welcome to attend.</p>
+        <p>The TAMULUG is a not-for-profit organization dedicated to providing education about the installation, usage, and maintenance of *NIX operating systems and development of free and open source software.</p>
       </div>
-      <div id="upcoming">{% block upcoming %}
-        <span class="next-meeting">Next Meeting: </span>
-        Topic Title by Some Person
-      {% endblock %}
+      <div class="content-box">
+        <h3>Howdy!</h3>
+        <p>Welcome to TAMULUG - the home of The Texas A&amp;M Unix &amp; Linux Users Group.</p>
+        <p>We currently meet every Wednesday evening at 7:00PM on Texas A&amp;M Campus in Zachry, room 105D. Anyone with an interest in Unix, Linux and open source software is welcome to attend.</p>
+        <p>The TAMULUG is a not-for-profit organization dedicated to providing education about the installation, usage, and maintenance of *NIX operating systems and development of free and open source software.</p>
       </div>
-      <div id="content">{% block content %}
-        <div class="content-box">
-          <h3>Howdy!</h3>
-          <p>This is an <a href="#">anchor</a></p>
-          <p>Welcome to TAMULUG - the home of The Texas A&amp;M Unix &amp; Linux Users Group.</p>
-          <p>We currently meet every Wednesday evening at 7:00PM on Texas A&amp;M Campus in Zachry, room 105D. Anyone with an interest in Unix, Linux and open source software is welcome to attend.</p>
-          <p>The TAMULUG is a not-for-profit organization dedicated to providing education about the installation, usage, and maintenance of *NIX operating systems and development of free and open source software.</p>
-        </div>
-        <div class="content-box">
-          <h3>Howdy!</h3>
-          <p>Welcome to TAMULUG - the home of The Texas A&amp;M Unix &amp; Linux Users Group.</p>
-          <p>We currently meet every Wednesday evening at 7:00PM on Texas A&amp;M Campus in Zachry, room 105D. Anyone with an interest in Unix, Linux and open source software is welcome to attend.</p>
-          <p>The TAMULUG is a not-for-profit organization dedicated to providing education about the installation, usage, and maintenance of *NIX operating systems and development of free and open source software.</p>
-        </div>
-        <div class="content-box">
-          <h3>Howdy!</h3>
-          <p>Welcome to TAMULUG - the home of The Texas A&amp;M Unix &amp; Linux Users Group.</p>
-          <p>We currently meet every Wednesday evening at 7:00PM on Texas A&amp;M Campus in Zachry, room 105D. Anyone with an interest in Unix, Linux and open source software is welcome to attend.</p>
-          <p>The TAMULUG is a not-for-profit organization dedicated to providing education about the installation, usage, and maintenance of *NIX operating systems and development of free and open source software.</p>
-        </div>
-        <div class="content-box">
-          <h3>Howdy!</h3>
-          <p>Welcome to TAMULUG - the home of The Texas A&amp;M Unix &amp; Linux Users Group.</p>
-          <p>We currently meet every Wednesday evening at 7:00PM on Texas A&amp;M Campus in Zachry, room 105D. Anyone with an interest in Unix, Linux and open source software is welcome to attend.</p>
-          <p>The TAMULUG is a not-for-profit organization dedicated to providing education about the installation, usage, and maintenance of *NIX operating systems and development of free and open source software.</p>
-        </div>
-      {% endblock %}
+      <div class="content-box">
+        <h3>Howdy!</h3>
+        <p>Welcome to TAMULUG - the home of The Texas A&amp;M Unix &amp; Linux Users Group.</p>
+        <p>We currently meet every Wednesday evening at 7:00PM on Texas A&amp;M Campus in Zachry, room 105D. Anyone with an interest in Unix, Linux and open source software is welcome to attend.</p>
+        <p>The TAMULUG is a not-for-profit organization dedicated to providing education about the installation, usage, and maintenance of *NIX operating systems and development of free and open source software.</p>
       </div>
-      <div id="footer">
-        <p>This website was lovingly crafted by Cody Lee and Eric Wood &lt;3<br/>
-        You can find the source code <a href="https://github.com/platinummonkey/TAMULUG-Website">here</a></p>
-      </div>
+    {% endblock %}
+    </div>
+    <div id="footer">
+      <p>This website was lovingly crafted by Cody Lee and Eric Wood &lt;3<br/>
+      You can find the source code <a href="https://github.com/platinummonkey/TAMULUG-Website">here</a></p>
     </div>
   </body>
 </html>

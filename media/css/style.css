@@ -110,6 +110,11 @@ a:hover
   margin: 0 auto;
   margin-top: 60px;
   background: #FFF;
+
+  /* give the footer the illusion of being further down on the page
+   * things look nicer this way, trust me!
+   */
+  min-height: 53%;
 }
 
 div#content > *:nth-child(2n+2) {
