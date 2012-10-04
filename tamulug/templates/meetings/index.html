@@ -15,10 +15,10 @@
 {% for m in meetings %}
       <div class="content-box">
         <h3><span class="meeting-date">{{ m.date }}</span> {{ m.title|title }}</h3>
+        <p>{{ m.details }}</p>
         {% if m.is_dinner %}
         <!-- generate google map -->
         {% else %}
-        <p>{{ m.details }}</p>
 	<p>Meeting Topics:<ul>{% for topic in m.getTopics %}
 		<li><strong>{{ topic.topic|title }}</strong> by {{ topic.presenter|title }}</li>
 	{% endfor %}
