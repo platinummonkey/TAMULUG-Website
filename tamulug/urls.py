@@ -31,4 +31,7 @@ urlpatterns = patterns('',
     #(r'^forum/', include('tamulug.forum.urls')),
     # catpcha
     (r'^captcha/', include('captcha.urls')),
+
+    # favicon.ico
+    (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/media/site_images/favicon.ico'}),
 )

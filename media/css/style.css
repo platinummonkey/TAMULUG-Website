@@ -1,7 +1,7 @@
 body
 {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 a
@@ -110,6 +110,11 @@ a:hover
   margin: 0 auto;
   margin-top: 60px;
   background: #FFF;
+
+  /* give the footer the illusion of being further down on the page
+   * things look nicer this way, trust me!
+   */
+  min-height: 53%;
 }
 
 div#content > *:nth-child(2n+2) {
@@ -161,11 +166,14 @@ div#content > *:nth-child(2n+2) {
   background: #660000;
   color: #EEE2BA;
   text-align: right;
-  padding: 5px;
+  padding: 3px;
   padding-left: 15px;
+  padding-right: 10px;
+  padding-bottom: 7px;
   border: solid #660000 1px;
   border-bottom-left-radius: 15px;
   box-shadow: -6px 8px 5px #CCC;
+  font-size: 10pt;
 }
 
 #upcoming a
