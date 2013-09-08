@@ -1,3 +1,4 @@
 temp_*.json
 *.pyc
 .DS_Store
+venv/
