@@ -1,0 +1,12 @@
+Django==1.5.2
+South==0.8.2
+argparse==1.2.1
+distribute==0.6.24
+django-filter==0.7
+django-pagination==1.0.7
+django-recaptcha==0.0.6
+psycopg2==2.5.1
+python-dateutil==2.1
+six==1.4.1
+vobject==0.8.1c
+wsgiref==0.1.2
