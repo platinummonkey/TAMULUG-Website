@@ -11,6 +11,8 @@
 7. Create a root web user
 8. Enable the site - requires mod_python installed
 
+Use the pip dependecies list in tamulug/requirements.pip instead of the manual list below
+
 PYTHON DEPENDENCIES:
   vobject
   email.mime.text

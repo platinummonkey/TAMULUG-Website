@@ -1,4 +1,5 @@
-from django.conf.urls.defaults import *
+from django.conf.urls import *
+from django.views.generic.base import RedirectView
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -31,7 +32,10 @@ urlpatterns = patterns('',
     #(r'^forum/', include('tamulug.forum.urls')),
     # catpcha
     (r'^captcha/', include('captcha.urls')),
+    
+    # robots.txt
+    (r'^robots\.txt$', include('robots.urls')),
 
     # favicon.ico
-    (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/media/site_images/favicon.ico'}),
+    (r'^favicon\.ico$', RedirectView.as_view(url='/media/site_images/favicon.ico')),
 )
