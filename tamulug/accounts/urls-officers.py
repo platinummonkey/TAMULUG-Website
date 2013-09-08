@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import *
+from django.conf.urls import *
 
 urlpatterns = patterns('tamulug.accounts.views-officers',
     # Uncomment the admin/doc line below to enable admin documentation:
