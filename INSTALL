@@ -1,15 +1,17 @@
 1. Create the root apache www directory
 2. clone the repo:
     git clone git://github.com/platinummonkey/TAMULUG-Website.git
-3. Update the apache site config.
-4. create the database and update the django settings.py
-5. install django-filter and django-pagination:
+3. Update the apache or nginx site config.
+4. create the database and update the django settings.py with any additional changes (ie. SMTP settings, secret key, etc)
+5. (If you use virtualenv) create your virtualenv and install the dependencies in tamulug/requirements.pip
+5. (Only If you don't use virtualenv!) install django-filter and django-pagination:
   easy_install django-pagination
   easy_install django-filter - you will need to apply the patches in django-filter_edits.txt!!!!
 6. cd in to the django directory:
   python manage.py syncdb
+  python manage.py migrate
 7. Create a root web user
-8. Enable the site - requires mod_python installed
+8. Enable the site - requires mod_python installed for apache
 
 Use the pip dependecies list in tamulug/requirements.pip instead of the manual list below
 
