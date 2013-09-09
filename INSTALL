@@ -1,3 +1,22 @@
+1. Create a web user 'webuser' with no permissions but has a home directory.
+2. Create the tamulug website folder: mkdir -p /opt; git clone git@github.com:platinummonkey/TAMULUG-Website.git
+3. Create your virtualenvs: sudo su - webuser; mkdir -p /home/webuser/.virtualenvs/tamulug
+4. Activate the virtualenv: source /home/webuser/.virtualenvs/tamulug
+5. Install the dependencies: pip install -U -r /opt/TAMULUG-Website/tamulug/requirements.pip
+6. Ensure you have a settings.py and that its settings are correct: DB, Secret Key, etc...
+7. Sync and Migrate the Database: cd /opt/TAMULUG-Website/tamulug; python manage.py syncdb; python manage.py migrate
+8. Install the Supervisor script for gunicorn (make sure gunicorn is installed)
+9. Install nginx and use the provided configuration file.
+10. Start the supervisor service for django, start nginx, you should now be golden
+
+
+
+
+
+
+
+# DEPRACATED:
+
 1. Create the root apache www directory
 2. clone the repo:
     git clone git://github.com/platinummonkey/TAMULUG-Website.git
